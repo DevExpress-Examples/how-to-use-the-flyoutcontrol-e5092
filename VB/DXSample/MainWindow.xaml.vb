@@ -1,36 +1,25 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-Imports System.Text
 Imports System.Windows
 Imports System.Windows.Controls
-Imports System.Windows.Data
-Imports System.Windows.Documents
-Imports System.Windows.Input
-Imports System.Windows.Media
-Imports System.Windows.Media.Imaging
-Imports System.Windows.Navigation
-Imports System.Windows.Shapes
 
 Namespace DXSample
-	''' <summary>
-	''' Interaction logic for MainWindow.xaml
-	''' </summary>
-	Partial Public Class MainWindow
-		Inherits Window
 
-		Public Sub New()
-			InitializeComponent()
-		End Sub
+    ''' <summary>
+    ''' Interaction logic for MainWindow.xaml
+    ''' </summary>
+    Public Partial Class MainWindow
+        Inherits Window
 
-		Private Sub TextBox_GotFocus(ByVal sender As Object, ByVal e As RoutedEventArgs)
-			flyout.IsOpen = False
-			flyout.PlacementTarget = TryCast(sender, UIElement)
-			flyout.IsOpen = True
-		End Sub
+        Public Sub New()
+            Me.InitializeComponent()
+        End Sub
 
-		Private Sub Button_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+        Private Sub TextBox_GotFocus(ByVal sender As Object, ByVal e As RoutedEventArgs)
+            Me.flyout.IsOpen = False
+            Me.flyout.PlacementTarget = TryCast(sender, UIElement)
+            Me.flyout.IsOpen = True
+        End Sub
 
-		End Sub
-	End Class
+        Private Sub Button_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+        End Sub
+    End Class
 End Namespace
